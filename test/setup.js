@@ -1,5 +1,13 @@
 import { sum } from "../src/sum";
 
+beforeAll(() => {
+  console.info("Before All");
+});
+
+afterAll(() => {
+  console.info("After All");
+});
+
 beforeEach(() => {
   console.info("Before each");
 });
@@ -14,6 +22,6 @@ test("First test", () => {
 });
 
 test("Second test", () => {
-    expect(sum(10, 5)).toBe(15);
-    console.info("Second test");
+  expect(sum(10, 5)).toBe(15);
+  console.info("Second test");
 });
